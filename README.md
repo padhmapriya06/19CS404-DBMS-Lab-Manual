@@ -47,7 +47,7 @@ Design a database for patient management, appointments, medical records, and bil
 
 # ER Diagram Submission - Student Name
 # Name: S. Padhma Priya
-# Reg.no:212222060169
+# Reg.no: 212222060169
 # Scenario Chosen:
 University 
 ## ER Diagram:
