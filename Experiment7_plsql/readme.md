@@ -1,5 +1,6 @@
 # Experiment 7: PL/SQL – Variables, Control Structures and Loops
-
+## Name: S.Padhma Priya
+## Reg.n0: 21222206169
 ## AIM
 To write and execute simple PL/SQL programs using variables, loops, and conditional statements.
 
@@ -28,16 +29,12 @@ END;
 # PL/SQL Programs – Steps and Expected Output
 
 ## 1. Write a PL/SQL program to find the Greatest of Two Numbers
-
-### Steps:
-- Declare two numeric variables and initialize them.
-- Use an `IF` statement to compare the values.
-- Display the greater number using `DBMS_OUTPUT.PUT_LINE`.
-
-**Expected Output:**  
+## Steps:
+1. Declare two numeric variables and initialize them.
+2. Use an IF statement to compare the values.
+3. Display the greater number using DBMS_OUTPUT.PUT_LINE.
+## Expected Output:
 Greater number is: 80
-
----
 
 ## 2. Write a PL/SQL program to Calculate Sum of First N Natural Numbers
 
@@ -50,8 +47,6 @@ Greater number is: 80
 **Expected Output:**  
 Sum of first 10 natural numbers is: 55
 
----
-
 ## 3. Write a PL/SQL program to generate Fibonacci series
 
 ### Steps:
@@ -63,9 +58,6 @@ Sum of first 10 natural numbers is: 55
 **Expected Output:**  
 n = 7  
 Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8
-
----
-
 ## 4. Write a PL/SQL Program to display the number in Reverse Order
 
 ### Steps:
@@ -76,8 +68,6 @@ Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8
 **Expected Output:**  
 n = 1535  
 Reversed number is 5351
-
----
 
 ## 5. Write a PL/SQL program to find the largest of three numbers
 
