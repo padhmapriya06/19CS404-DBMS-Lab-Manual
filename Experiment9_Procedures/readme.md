@@ -1,9 +1,8 @@
 # Experiment 9: PL/SQL – Procedures and Functions
-
+## Name: S.Padhma Priya
+## Reg.no: 212222060169
 ## AIM
 To understand and implement procedures and functions in PL/SQL for performing various operations such as calculations, decision-making, and looping.
-
----
 
 ## THEORY
 
