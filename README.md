@@ -1,46 +1,104 @@
-# DBMS Laboratory Manual Submission
+# Experiment 1: Entity-Relationship (ER) Diagram
 
-## 🎓 Course: 19CS404 Database Management System and its Applications  
-## 🧑‍🏫 Instructor: Ms. G Abinaya 
+## 🎯 Objective:
+To understand and apply the concepts of ER modeling by creating an ER diagram for a real-world application.
 
-![image](https://github.com/user-attachments/assets/7e6f9751-b530-4526-9a3d-8e322e3b2e6d)
+## 📚 Purpose:
+The purpose of this workshop is to gain hands-on experience in designing ER diagrams that visually represent the structure of a database including entities, relationships, attributes, and constraints.
 
-### 📝 Instructions for Students
+---
 
-1. Fork this repository to your GitHub profile.
-2. For each experiment:
-   SQL queries based on questions generated randomly from Moodle.
-   - Complete the question on Moodle.
-   - Each experiment folder contains **two Markdown files**
-     1. `README.md`
+## 🧪 Choose One Scenario:
 
-        This file contains:
-         - 🎯 **Aim**
-         - 📚 **Theory**
-         - 📝 **Result**
-        
-        You **do not need to edit** this file unless instructed.
-      3. `output.md`
+### 🔹 Scenario 1: University Database
+Design a database to manage students, instructors, programs, courses, and student enrollments. Include prerequisites for courses.
 
-         You **must update this file** with your answers and outputs.
-         For each of the 10 Moodle-generated questions:
-         - Paste the **question**
-         - Write the **SQL query** inside the code block
-         - Paste a **screenshot or terminal output** below it
-3. Commit and push your changes.
-4. Create a pull request to the original repository
+**User Requirements:**
+- Academic programs grouped under departments.
+- Students have admission number, name, DOB, contact info.
+- Instructors with staff number, contact info, etc.
+- Courses have number, name, credits.
+- Track course enrollments by students and enrollment date.
+- Add support for prerequisites (some courses require others).
 
-### ✅ Experiments List
+---
 
-| Exp No | Title                          | Module Based? |
-|--------|--------------------------------|---------------|
-| 1      | ER Diagram                     | No            |
-| 2      | DDL Commands                   | Yes           |
-| 3      | DML Commands                   | Yes           |
-| 4      | Aggregate, GROUP BY, HAVING   | Yes           |
-| 5      | Subqueries and Views          | Yes           |
-| 6      | Joins                         | Yes           |
-| 7      | Pl/sql                        | No            |
-| 8      | Procedures, Functions         | No            |
-| 9      | Cursors, Exception Handling   | No            |
-| 10     | Triggers                      | No            |
+### 🔹 Scenario 2: Hospital Database
+Design a database for patient management, appointments, medical records, and billing.
+
+**User Requirements:**
+- Patient details including contact and insurance.
+- Doctors and their departments, contact info, specialization.
+- Appointments with reason, time, patient-doctor link.
+- Medical records with treatments, diagnosis, test results.
+- Billing and payment details for each appointment.
+
+---
+
+## 📝 Tasks:
+1. Identify entities, relationships, and attributes.
+2. Draw the ER diagram using any tool (draw.io, dbdiagram.io, hand-drawn and scanned).
+3. Include:
+   - Cardinality & participation constraints
+   - Prerequisites for University OR Billing for Hospital
+4. Explain:
+   - Why you chose the entities and relationships.
+   - How you modeled prerequisites or billing.
+
+# ER Diagram Submission - Student Name
+# Name: S. Padhma Priya
+# Reg.no:212222060169
+# Scenario Chosen:
+University 
+## ER Diagram:
+![image](https://github.com/user-attachments/assets/9177c06b-a61a-4691-afaa-ecdd1e051a16)
+
+## Entities and Attributes:
+
+# Students:
+Attributes: StudentID, FirstName, LastName, DateOfBirth, Email, PhoneNumber, EnrollmentDate, DepartmentID.
+# Faculty:
+Attributes: FacultyID, FirstName, LastName, Email, PhoneNumber, HireDate, DepartmentID.
+# Department:
+Attributes: DepartmentID, DepartmentName, Location.
+# Course:
+Attributes: CourseID, CourseName, CourseCode, Credits, DepartmentID.
+# Enrollment:
+Attributes: EnrollmentID, StudentID, CourseID, EnrollmentDate, Grade.
+# Class:
+Attributes: ClassID, CourseID, FacultyID, Semester, Year, Schedule.
+# Advising:
+Attributes: AdvisingID, StudentID, FacultyID, AdvisingDate.
+
+## Relationships and Constraints:
+
+## Student–Advising–Faculty:
+Relationship: Advises Cardinality: Many-to-Many (each student can have multiple advisors, each faculty can advise multiple students) Participation: Total on Advising
+## Student–Enrollment–Course:
+Relationship: Enrolled in Cardinality: Many-to-Many Participation: Total on Enrollment
+## Course–Class–Faculty:
+Relationship: Teaches Cardinality: Many-to-Many (each course can be taught in multiple classes, each faculty can teach multiple classes)
+## Course–Department:
+Relationship: Offered by Cardinality: Many-to-One (Each course belongs to one department)
+## Student–Department:
+Relationship: Belongs to Cardinality: Many-to-One
+## Faculty–Department:
+Relationship: Belongs to Cardinality: Many-to-One
+## Class–Course:
+Relationship: Includes Cardinality: Many-to-One
+## Enrollment–Class:
+Relationship: Taught by Not standard; assumes indirect mapping via faculty
+
+## Extension (Prerequisite / Billing):
+## Prerequisite Modeling:
+Could be modeled with a recursive relationship on Course: Relationship: Requires Cardinality: Many-to-Many (a course can have many prerequisites and be a prerequisite for many others)
+
+## Design Choices:
+Use of separate entities for Advising, Enrollment, and Class helps normalize many-to-many relationships and maintain relational integrity. Department as a central entity provides a logical way to group students, faculty, and courses.
+
+Class entity includes scheduling details, separating course content from the time/location of delivery.
+
+The design is modular and supports easy extension for future requirements like prerequisites, billing, or attendance.
+
+## RESULT
+Thus, the Entity-Relationship (ER) Diagram have been created successfully.
