@@ -1,5 +1,5 @@
 # Experiment 5: Subqueries and Views
-## Name:S. Padhma Priya
+## Name: S. Padhma Priya
 ## Reg.no: 212222060169
 ## AIM
 To study and implement subqueries and views.
