@@ -1,6 +1,6 @@
 # Experiment 7: PL/SQL – Variables, Control Structures and Loops
 ## Name: S.Padhma Priya
-## Reg.n0: 21222206169
+## Reg.n0: 212222060169
 ## AIM
 To write and execute simple PL/SQL programs using variables, loops, and conditional statements.
 
